@@ -19,6 +19,7 @@ using System.Windows.Threading;
 
 namespace GaokaoCountdown
 {
+
     public partial class MainWindow : Window
     {
             public MainWindow()
@@ -45,6 +46,14 @@ namespace GaokaoCountdown
             };
 
             timer.Start();
+        }
+
+        private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
         }
     }
 }

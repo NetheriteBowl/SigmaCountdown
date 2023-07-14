@@ -3,17 +3,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GaokaoCountdown"
         mc:Ignorable="d"
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True"
         Title="Gaokao Countdown"
-        ShowInTaskbar="False">
-    <Border>
-        <Grid>
-        <Canvas Grid.Row="0" Height="535" VerticalAlignment="Bottom">
+        ShowInTaskbar="False" Width="682.237" Height="362.172">
+    <Grid Margin="0,80,0,0" MouseLeftButtonDown="Grid_MouseLeftButtonDown" VerticalAlignment="Center">
+        <Canvas Grid.Row="0"  Margin="0,-395,0,0" HorizontalAlignment="Left" Width="656" RenderTransformOrigin="0.501,0.212">
             <TextBlock Text="距2024高考" FontSize="60" Foreground="#DFD9D6"
                    Canvas.Left="10" Canvas.Bottom="100" Canvas.Top="261" FontFamily="{StaticResource zihun59}" />
             <TextBlock Text="还剩" FontSize="60" Foreground="#DFD9D6"
@@ -22,10 +20,10 @@
                    Canvas.Left="333" Canvas.Bottom="100" Canvas.Top="261" Height="136" Width="219" FontFamily="{StaticResource DIN1451}" />
             <TextBlock Text="天" FontSize="60" Foreground="#DFD9D6"
                    Canvas.Left="562" Canvas.Bottom="100" Canvas.Top="331" RenderTransformOrigin="0.983,0.53" FontFamily="{StaticResource zihun59}" />
-            <Border x:Name="LeftBorder" BorderThickness="10" BorderBrush="#DA3838" Width="5" Height="130"
-                Canvas.Left="187" Canvas.Bottom="0" Canvas.Top="331">
+            <Border x:Name="LeftBorder" BorderThickness="10" BorderBrush="#DA3838" Width="7" Height="130"
+                Canvas.Left="185" Canvas.Bottom="0" Canvas.Top="331">
             </Border>
-            <TextBlock Text="National College Entrance Examnation"
+            <TextBlock Text="NATIONAL COLLEGE ENTRANCE EXAMNATION"
                FontSize="20" Foreground="#DFD9D6" HorizontalAlignment="Center" Height="26" Canvas.Left="207" Canvas.Top="410" />
             <TextBlock Text="IN " FontSize="20" Foreground="#DFD9D6" HorizontalAlignment="Center" Height="26" Canvas.Left="208" Canvas.Top="432" />
             <TextBlock x:Name="pCountdown" Text="365" FontSize="20" Foreground="#DFD9D6" HorizontalAlignment="Center" Height="26" Canvas.Left="237" Canvas.Top="432" />
@@ -34,5 +32,4 @@
         </Canvas>
     </Grid>
 
-        </Border>
 </Window>
