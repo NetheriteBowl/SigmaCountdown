@@ -46,5 +46,17 @@ namespace GaokaoCountdown.Properties {
                 this["Date"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool AutoS {
+            get {
+                return ((bool)(this["AutoS"]));
+            }
+            set {
+                this["AutoS"] = value;
+            }
+        }
     }
 }

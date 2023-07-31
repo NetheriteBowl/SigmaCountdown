@@ -5,9 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GaokaoCountdown"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
-    <Grid>
-                <DatePicker x:Name="datePicker" SelectedDateChanged="DatePicker_SelectedDateChanged" Margin="0,0,195,385" />
-                <Button Content="保存并关闭（手动重启）" Click="SaveButton_Click" Margin="514,320,42,42" />
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        Title="设置" Height="450" Width="300">
+    <ScrollViewer>
+        <Grid>
+            <DatePicker x:Name="datePicker" Style="{StaticResource DatePickerExtend}" hc:InfoElement.TitlePlacement="Left" hc:InfoElement.Title="选择事件日期" SelectedDateChanged="DatePicker_SelectedDateChanged" Margin="10,46,10,342"/>
+            <CheckBox x:Name="checkbox" Checked="AutoStartChecked" Unchecked="AutoStartUnchecked" Content="开机自启动" Margin="10,94,10,310"/>
+            <Button Content="保存并重启程序" Click="SaveButton_Click"/>
             </Grid>
+        
+        </ScrollViewer>
 </Window>
