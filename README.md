@@ -1,6 +1,7 @@
 # Gaokao-Countdown-With-Wandering-Earth-2-Style
 ## 概述
 一个具有《流浪地球Ⅱ》倒计时风格的高考倒计时
+![截图](https://github.com/CN-Ironegg/Gaokao-Countdown-With-Wandering-Earth-2-Style/assets/75211294/983f3114-4a33-4d1d-9e47-5fa12aa7cf31)
 
 灵感来自郭帆导演的《流浪地球Ⅱ》和https://github.com/WXRIW/Gaokao-Countdown
 
@@ -10,7 +11,7 @@
 
 3.右键菜单关闭界面
 
-4.支持开机自启（设置界面有关按钮不完善）
+4.支持开机自启
 
 ## TODO  （在做了/doge）
 编辑倒计时事件名
