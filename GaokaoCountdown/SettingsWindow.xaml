@@ -7,12 +7,15 @@
         mc:Ignorable="d"
         xmlns:hc="https://handyorg.github.io/handycontrol"
         Title="设置" Height="450" Width="300">
-    <ScrollViewer>
+    <hc:SimpleStackPanel>
         <Grid>
-            <DatePicker x:Name="datePicker" Style="{StaticResource DatePickerExtend}" hc:InfoElement.TitlePlacement="Left" hc:InfoElement.Title="选择事件日期" SelectedDateChanged="DatePicker_SelectedDateChanged" Margin="10,46,10,342"/>
-            <CheckBox x:Name="checkbox" Checked="AutoStartChecked" Unchecked="AutoStartUnchecked" Content="开机自启动" Margin="10,94,10,310"/>
-            <Button Content="保存并重启程序" Click="SaveButton_Click"/>
+            <Grid>
+                <DatePicker x:Name="datePicker" Style="{StaticResource DatePickerExtend}" hc:InfoElement.TitlePlacement="Left" hc:InfoElement.Title="选择事件日期" SelectedDateChanged="DatePicker_SelectedDateChanged" Margin="10,46,10,342"/>
+                
+                <CheckBox x:Name="checkbox" Checked="AutoStartChecked" Unchecked="AutoStartUnchecked" Content="开机自启动" Margin="10,94,10,310" Height="16"/>
+                <Button Content="保存并重启程序" Click="SaveButton_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="106" Margin="0,0,10,10"/>
             </Grid>
-        
-        </ScrollViewer>
+
+        </Grid>
+    </hc:SimpleStackPanel>
 </Window>

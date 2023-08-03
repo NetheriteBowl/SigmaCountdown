@@ -72,7 +72,7 @@ namespace GaokaoCountdown
                 using (TaskService taskService = new TaskService())
                 {
                     // 定义计划任务名称和描述
-                    string taskName = "倒计时开机启动";
+                    string taskName = "倒计时自启动";
                     string taskDescription = "可在右键菜单的设置中关闭";
                     string appPath = Process.GetCurrentProcess().MainModule.FileName;
                     // 创建计划任务
