@@ -1,4 +1,4 @@
-# Gaokao-Countdown-With-Wandering-Earth-2-Style
+# Sigma-Countdown-With-Wandering-Earth-2-Style
 ## 概述
 一个具有《流浪地球Ⅱ》倒计时风格的高考倒计时
 ![截图](https://github.com/CN-Ironegg/Gaokao-Countdown-With-Wandering-Earth-2-Style/assets/75211294/983f3114-4a33-4d1d-9e47-5fa12aa7cf31)
