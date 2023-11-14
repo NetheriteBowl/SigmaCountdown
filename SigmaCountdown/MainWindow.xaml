@@ -1,0 +1,49 @@
+﻿<Window x:Class="SigmaCountdown.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True"
+        Title="Sigma Countdown"
+        Loaded="Window_Loaded"
+        ShowInTaskbar="False">
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem x:Name="MenuItem_Settings" Header="设置" Click="MenuItem_Settings_Click"/>
+            <Separator/>
+            <MenuItem x:Name="MenuItem_Close" Header="关闭" Click="MenuItem_Close_Click"/>
+
+        </ContextMenu>
+    </Window.ContextMenu>
+    <Grid Margin="0,80,0,0" MouseLeftButtonDown="Grid_MouseLeftButtonDown" VerticalAlignment="Center">
+        <Canvas Margin="8,-4,2,-2"  >
+
+            <TextBlock Text="距" FontSize="60" Foreground="#DFD9D6"
+                   Canvas.Left="51" Canvas.Bottom="100" Canvas.Top="-139" FontFamily="{StaticResource zihun59}" />
+            <TextBlock x:Name="year" Text="2024" FontSize="60" Foreground="#DFD9D6"
+                   Canvas.Left="113" Canvas.Bottom="100" Canvas.Top="-139" FontFamily="{StaticResource DIN1451}" />
+            <TextBlock x:Name="event" Text="高考" FontSize="60" Foreground="#DFD9D6"
+                   Canvas.Left="244" Canvas.Bottom="100" Canvas.Top="-139" FontFamily="{StaticResource zihun59}" />
+            <TextBlock Text="还剩" FontSize="60" Foreground="#DFD9D6"
+                   Canvas.Left="244" Canvas.Bottom="100" Canvas.Top="-69" FontFamily="{StaticResource zihun59}" />
+            <TextBlock x:Name="countdown" Text="365" FontSize="130" Foreground="#DA3838"
+                   Canvas.Left="369" Canvas.Bottom="100" Canvas.Top="-139" Height="136" Width="auto" FontFamily="{StaticResource DIN1451}" TextAlignment="Center" />
+            <TextBlock Text="天" FontSize="60" Foreground="#DFD9D6"
+                   Canvas.Left="583" Canvas.Bottom="100" Canvas.Top="-69" RenderTransformOrigin="0.983,0.53" FontFamily="{StaticResource zihun59}" />
+            <Border x:Name="LeftBorder" BorderThickness="10" BorderBrush="#DA3838" Width="7" Height="130"
+                Canvas.Left="225" Canvas.Bottom="0" Canvas.Top="-69">
+            </Border>
+            <TextBlock x:Name="event_eng" Text="NATIONAL COLLEGE ENTRANCE EXAMNATION"
+               FontSize="20" Foreground="#DFD9D6" HorizontalAlignment="Center" Height="26" Canvas.Left="245" Canvas.Top="10" />
+            <TextBlock Text="IN" FontSize="20" Foreground="#DFD9D6" HorizontalAlignment="Center" Height="26" Canvas.Left="245" Canvas.Top="32" />
+            <TextBlock x:Name="pCountdown" Text="365" FontSize="20" Foreground="#DFD9D6" HorizontalAlignment="Center" Height="26" Canvas.Left="272" Canvas.Top="32" TextAlignment="Center" Width="38" />
+            <TextBlock Text="DAYS" FontSize="20" Foreground="#DFD9D6" HorizontalAlignment="Center" Height="26" Canvas.Left="315" Canvas.Top="32" />
+        </Canvas>
+    </Grid>
+
+</Window>
