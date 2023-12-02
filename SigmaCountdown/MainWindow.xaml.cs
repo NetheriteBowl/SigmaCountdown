@@ -18,13 +18,18 @@ namespace SigmaCountdown
     private void Window_Loaded(object sender, RoutedEventArgs e)
     {
             this.Height = SystemParameters.WorkArea.Height / 4;
-            this.Width = 3.3*this.Height;
+            this.Width = 3*this.Height;
             Left = SystemParameters.PrimaryScreenWidth - (this.Width);
-            Top = 3*SystemParameters.WorkArea.Height / 4;
+            event_level.Text = Properties.Settings.Default.EventLevel_Text;
+            if (Properties.Settings.Default.TopLeft == false)
+            { Top = SystemParameters.WorkArea.Height - (this.Height); }
+            else
+            { Top = 1;}
         }
+
         private void StartCountdown()
         {
-            DateTime deadline = Properties.Settings.Default.Date + new TimeSpan(8, 30, 0);
+            DateTime deadline = Properties.Settings.Default.Date + new TimeSpan(9, 00, 0);
             TimeSpan timeLeft = deadline - DateTime.Now;
             int daysLeft = (int)timeLeft.TotalDays;
 
@@ -43,7 +48,7 @@ namespace SigmaCountdown
             timer.Start();
         }
 
-        private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Canvas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {

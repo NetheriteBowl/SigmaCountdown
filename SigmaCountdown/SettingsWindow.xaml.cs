@@ -5,18 +5,23 @@ using System.Windows.Controls;
 using Microsoft.Win32.TaskScheduler;
 
 namespace SigmaCountdown
-{ 
+{
     public partial class SettingsWindow : Window
     {
-        
+
         public SettingsWindow()
         {
             InitializeComponent();
             DateTime selectedDate = Properties.Settings.Default.Date;
             datePicker.SelectedDate = selectedDate;
-            bool Isonoff = Properties.Settings.Default.AutoS;
-            checkbox.IsChecked = Isonoff;
+            bool AutoSIsonoff = Properties.Settings.Default.AutoS;
+            AutoStartCheckbox.IsChecked = AutoSIsonoff;
+            bool TopLeftIsonoff = Properties.Settings.Default.TopLeft;
+            TopLeftCheckbox.IsChecked = TopLeftIsonoff;
+            event_Level_TB.Text = Properties.Settings.Default.EventLevel_Text;
         }
+
+        //日期设定
         private void DatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
             DatePicker datePicker = sender as DatePicker;
@@ -25,6 +30,25 @@ namespace SigmaCountdown
             Properties.Settings.Default.Date = selectedDate.Date;
             Properties.Settings.Default.Year = selectedDate.Year.ToString();
         }
+
+        //编辑提醒级别文本
+        private void LevelTextChangedEventHandler(object sender, TextChangedEventArgs args)
+        {
+            Properties.Settings.Default.EventLevel_Text = event_Level_TB.Text;
+        }
+
+        //左上角显示
+        private void TopLeftChecked(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.TopLeft = true;
+        }
+
+        private void TopLeftUnchecked(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.TopLeft = false;
+        }
+
+        //自启动
         private void AutoStartChecked(object sender, RoutedEventArgs e)
         {
             AutoStartManager.SetAutoStart(true);
@@ -34,25 +58,13 @@ namespace SigmaCountdown
         {
             AutoStartManager.SetAutoStart(false);
         }
-
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
-        {
-            Properties.Settings.Default.Save();
-            // 返回主界面
-            MainWindow MainWindow = Application.Current.MainWindow as MainWindow;
-            if (MainWindow != null)
-            {
-                System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
-                Application.Current.Shutdown();
-            }
-        }
         public static class AutoStartManager
         {
             private const string TaskName = "Sigma Countdown - 倒计时自启动";
-            
+
             public static void SetAutoStart(bool enable)
             {
-                if (enable) 
+                if (enable)
                 {
                     RegisterAutoStart();
                     Properties.Settings.Default.AutoS = true;
@@ -100,7 +112,19 @@ namespace SigmaCountdown
                     taskService.RootFolder.DeleteTask(taskName, false);
                 }
             }
-            public class GlowWindow : Window { }
+        }
+
+        //保存按钮
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.Save();
+            // 返回主界面
+            MainWindow MainWindow = Application.Current.MainWindow as MainWindow;
+            if (MainWindow != null)
+            {
+                System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+                Application.Current.Shutdown();
+            }
         }
     }
 }
