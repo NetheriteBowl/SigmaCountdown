@@ -58,5 +58,29 @@ namespace SigmaCountdown.Properties {
                 this["AutoS"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool TopLeft {
+            get {
+                return ((bool)(this["TopLeft"]));
+            }
+            set {
+                this["TopLeft"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("还剩")]
+        public string EventLevel_Text {
+            get {
+                return ((string)(this["EventLevel_Text"]));
+            }
+            set {
+                this["EventLevel_Text"] = value;
+            }
+        }
     }
 }
