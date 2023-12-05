@@ -18,7 +18,7 @@ namespace SigmaCountdown
     private void Window_Loaded(object sender, RoutedEventArgs e)
     {
             this.Height = SystemParameters.WorkArea.Height / 4;
-            this.Width = 3*this.Height;
+            this.Width = 652;
             Left = SystemParameters.PrimaryScreenWidth - (this.Width);
             event_level.Text = Properties.Settings.Default.EventLevel_Text;
             if (Properties.Settings.Default.TopLeft == false)

@@ -11,7 +11,7 @@
         AllowsTransparency="True"
         Title="Sigma Countdown"
         Loaded="Window_Loaded"
-        ShowInTaskbar="False" Height="213" Width="656">
+        ShowInTaskbar="False" Height="213" Width="651.885">
     <Window.ContextMenu>
         <ContextMenu>
             <MenuItem x:Name="MenuItem_Settings" Header="设置" Click="MenuItem_Settings_Click"/>
@@ -21,28 +21,28 @@
         </ContextMenu>
     </Window.ContextMenu>
 
-    <Canvas MouseLeftButtonDown="Canvas_MouseLeftButtonDown" Margin="-57,0,7,-1" Height="204" VerticalAlignment="Bottom">
+    <Canvas MouseLeftButtonDown="Canvas_MouseLeftButtonDown" Margin="-35,0,-18,-1" Height="204" VerticalAlignment="Bottom">
 
         <TextBlock Text="距" FontSize="60" Foreground="#DFD9D6"
-                   Canvas.Left="51" Canvas.Bottom="100" Canvas.Top="0" FontFamily="{StaticResource zihun59}" />
+                   Canvas.Left="28" Canvas.Bottom="100" Canvas.Top="0" FontFamily="{StaticResource zihun59}" />
         <TextBlock x:Name="year" Text="2024" FontSize="60" Foreground="#DFD9D6"
-                   Canvas.Left="113" Canvas.Bottom="100" Canvas.Top="0" FontFamily="{StaticResource DIN1451}" />
+                   Canvas.Left="90" Canvas.Bottom="100" Canvas.Top="0" FontFamily="{StaticResource DIN1451}" />
         <TextBlock x:Name="event" Text="高考" FontSize="60" Foreground="#DFD9D6"
-                   Canvas.Left="244" Canvas.Bottom="100" Canvas.Top="0" FontFamily="{StaticResource zihun59}" />
+                   Canvas.Left="221" Canvas.Bottom="100" Canvas.Top="0" FontFamily="{StaticResource zihun59}" />
         <TextBlock x:Name="event_level" Text="还剩" FontSize="60" Foreground="#DFD9D6"
-                   Canvas.Left="244" Canvas.Bottom="100" Canvas.Top="70" FontFamily="{StaticResource zihun59}" />
+                   Canvas.Left="221" Canvas.Bottom="100" Canvas.Top="70" FontFamily="{StaticResource zihun59}" />
         <TextBlock x:Name="countdown" Text="365" FontSize="130" Foreground="#DA3838"
-                   Canvas.Left="369" Canvas.Bottom="100" Canvas.Top="0" Height="136" Width="auto" FontFamily="{StaticResource DIN1451}" TextAlignment="Center" />
+                   Canvas.Left="346" Canvas.Bottom="100" Canvas.Top="0" Height="136" Width="auto" FontFamily="{StaticResource DIN1451}" TextAlignment="Center" />
         <TextBlock Text="天" FontSize="60" Foreground="#DFD9D6"
-                   Canvas.Left="583" Canvas.Bottom="100" Canvas.Top="70" RenderTransformOrigin="0.983,0.53" FontFamily="{StaticResource zihun59}" />
+                   Canvas.Left="560" Canvas.Bottom="100" Canvas.Top="70" RenderTransformOrigin="0.983,0.53" FontFamily="{StaticResource zihun59}" />
         <Border x:Name="LeftBorder" BorderThickness="10" BorderBrush="#DA3838" Width="8" Height="111"
-                Canvas.Left="225" Canvas.Bottom="0" Canvas.Top="77">
+                Canvas.Left="202" Canvas.Bottom="0" Canvas.Top="77">
         </Border>
-        <TextBlock x:Name="event_eng" Text="NATIONAL COLLEGE ENTRANCE EXAMNATION"
-               FontSize="20" Foreground="#DFD9D6" HorizontalAlignment="Center" Height="26" Canvas.Left="248" Canvas.Top="137" />
-        <TextBlock Text="IN" FontSize="20" Foreground="#DFD9D6" HorizontalAlignment="Center" Height="26" Canvas.Left="249" Canvas.Top="163" />
-        <TextBlock x:Name="pCountdown" Text="365" FontSize="20" Foreground="#DFD9D6" HorizontalAlignment="Center" Height="26" Canvas.Left="276" Canvas.Top="163" TextAlignment="Center" Width="38" />
-        <TextBlock Text="DAYS" FontSize="20" Foreground="#DFD9D6" HorizontalAlignment="Center" Height="26" Canvas.Left="319" Canvas.Top="163" />
+        <TextBlock x:Name="event_eng" Text="NATIONAL COLLEGE ENTRANCE EXAMINATION"
+               FontSize="20" Foreground="#DFD9D6" HorizontalAlignment="Center" Height="26" Canvas.Left="225" Canvas.Top="137" />
+        <TextBlock Text="IN" FontSize="20" Foreground="#DFD9D6" HorizontalAlignment="Center" Height="26" Canvas.Left="226" Canvas.Top="163" />
+        <TextBlock x:Name="pCountdown" Text="365" FontSize="20" Foreground="#DFD9D6" HorizontalAlignment="Center" Height="26" Canvas.Left="253" Canvas.Top="163" TextAlignment="Center" Width="38" />
+        <TextBlock Text="DAYS" FontSize="20" Foreground="#DFD9D6" HorizontalAlignment="Center" Height="26" Canvas.Left="296" Canvas.Top="163" />
     </Canvas>
 
 
