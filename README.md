@@ -4,7 +4,6 @@
 
 ![截图](https://github.com/NetheriteBowl/SigmaCountdown/assets/75211294/43396f17-0a28-49c7-883e-84b656595adf)
 
-
 1.支持编辑高考年份
 
 2.启动后自动贴靠右下角
