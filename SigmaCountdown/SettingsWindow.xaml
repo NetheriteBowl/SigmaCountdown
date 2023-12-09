@@ -13,7 +13,7 @@
             <Grid Background="#A84586F3" Height="145" VerticalAlignment="Top">
                 <TextBlock Text="Sigma Countdown" FontSize="25"  Margin="10,10,10,102" FontWeight="Bold" FontFamily="Microsoft Sans Serif"/>
                 <TextBlock Text="with wandering earth 2 style" FontSize="14" Margin="10,42,10,77" FontStyle="Italic" TextDecorations="Underline"/>
-                <TextBlock Text="⚠️ 建议在倒数1000日内使用，否则将造成布局混乱" Margin="10,78,10,41" Foreground="#FFDA0000" FontWeight="Bold"/>
+                <TextBlock Text="⚠️ 建议在倒数1000日内使用" Margin="10,78,10,41" Foreground="#FFDA0000" FontWeight="Bold"/>
                 <TextBlock Text="Developed by Netherite_Bowl" FontSize="13" Margin="10,104,10,15" TextDecorations="{x:Null}"/>
             </Grid>
 
@@ -21,7 +21,7 @@
         <Grid Height="275" VerticalAlignment="Top" Margin="0,-11,0,-24">
             <DatePicker x:Name="datePicker" Style="{StaticResource DatePickerExtend}" hc:TitleElement.TitlePlacement="Left" hc:TitleElement.Title="选择事件日期" SelectedDateChanged="DatePicker_SelectedDateChanged" Margin="10,11,10,232"/>
             <CheckBox x:Name="AutoStartCheckbox"  Checked="AutoStartChecked" Unchecked="AutoStartUnchecked" Content="开机自启动" Margin="10,83,10,176" Height="16"/>
-            <CheckBox x:Name="TopLeftCheckbox" Checked="TopLeftChecked" Unchecked="TopLeftUnchecked" Content="显示在左上角" Margin="10,108,10,151" Height="16"/>
+            <CheckBox x:Name="TopRightCheckbox" Checked="TopRightChecked" Unchecked="TopRightUnchecked" Content="显示在右上角" Margin="10,108,10,151" Height="16"/>
             <TextBox x:Name="event_Level_TB"  TextChanged="LevelTextChangedEventHandler"  Text="" Style="{StaticResource TextBoxExtend}" hc:InfoElement.TitlePlacement="Left" hc:InfoElement.Placeholder="默认为“还剩”" hc:InfoElement.Title="事件提醒级别" VerticalAlignment="Center" Margin="10,46,10,199"/>
             <Button Content="保存并重启程序" Click="SaveButton_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="106" Margin="0,0,10,10"/>
         </Grid>
