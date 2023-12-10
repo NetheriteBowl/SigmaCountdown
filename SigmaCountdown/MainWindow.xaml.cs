@@ -32,21 +32,19 @@ namespace SigmaCountdown
             DateTime deadline = Properties.Settings.Default.Date + new TimeSpan(9, 00, 0);
             TimeSpan timeLeft = deadline - DateTime.Now;
             int daysLeft = (int)timeLeft.TotalDays;
-            string Numdecimal = ((timeLeft.Hours * 3600000 + timeLeft.Minutes * 60000 + timeLeft.Seconds * 1000 + timeLeft.Milliseconds) / 86400000.0).ToString(".00");
-            countdown.Text = daysLeft.ToString();
-            pCountdown.Text = "IN " + daysLeft.ToString() + " DAYS";
-            decimalNum.Text = Numdecimal.ToString();
-            //DispatcherTimer timer = new DispatcherTimer();
-            // timer.Interval = TimeSpan.FromSeconds(1);
-            // timer.Tick += (sender, e) =>
-            //{
-            //   timeLeft = deadline - DateTime.Now;
-            //   daysLeft = (int)timeLeft.TotalDays;
-            //   countdown.Text = daysLeft.ToString();
-            //   pCountdown.Text = daysLeft.ToString();
-            // };
+            DispatcherTimer timer = new DispatcherTimer();
+             timer.Interval = TimeSpan.FromSeconds(1);
+             timer.Tick += (sender, e) =>
+            {
+              timeLeft = deadline - DateTime.Now;
+              daysLeft = (int)timeLeft.TotalDays;
+                string Numdecimal = ((timeLeft.Hours * 3600000 + timeLeft.Minutes * 60000 + timeLeft.Seconds * 1000 + timeLeft.Milliseconds) / 86400000.0).ToString(".000");
+                countdown.Text = daysLeft.ToString();
+                pCountdown.Text = "IN " + daysLeft.ToString() + " DAYS";
+                decimalNum.Text = Numdecimal.ToString();
+            };
 
-            // timer.Start();
+             timer.Start();
         }
 
         private void Canvas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
