@@ -7,7 +7,6 @@ using System.Windows.Threading;
 namespace SigmaCountdown
 {
 
-
     public partial class MainWindow : Window
     {
             public MainWindow()
