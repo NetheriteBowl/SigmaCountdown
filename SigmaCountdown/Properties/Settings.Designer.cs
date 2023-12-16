@@ -62,12 +62,12 @@ namespace SigmaCountdown.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool TopLeft {
+        public bool TopRight {
             get {
-                return ((bool)(this["TopLeft"]));
+                return ((bool)(this["TopRight"]));
             }
             set {
-                this["TopLeft"] = value;
+                this["TopRight"] = value;
             }
         }
         

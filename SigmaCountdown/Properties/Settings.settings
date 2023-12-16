@@ -11,7 +11,7 @@
     <Setting Name="AutoS" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="TopLeft" Type="System.Boolean" Scope="User">
+    <Setting Name="TopRight" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="EventLevel_Text" Type="System.String" Scope="User">
