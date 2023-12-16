@@ -16,8 +16,8 @@ namespace SigmaCountdown
             datePicker.SelectedDate = selectedDate;
             bool AutoSIsonoff = Properties.Settings.Default.AutoS;
             AutoStartCheckbox.IsChecked = AutoSIsonoff;
-            bool TopLeftIsonoff = Properties.Settings.Default.TopLeft;
-            TopLeftCheckbox.IsChecked = TopLeftIsonoff;
+            bool TopRightIsonoff = Properties.Settings.Default.TopRight;
+            TopRightCheckbox.IsChecked = TopRightIsonoff;
             event_Level_TB.Text = Properties.Settings.Default.EventLevel_Text;
         }
 
@@ -37,15 +37,15 @@ namespace SigmaCountdown
             Properties.Settings.Default.EventLevel_Text = event_Level_TB.Text;
         }
 
-        //左上角显示
-        private void TopLeftChecked(object sender, RoutedEventArgs e)
+        //右上角显示
+        private void TopRightChecked(object sender, RoutedEventArgs e)
         {
-            Properties.Settings.Default.TopLeft = true;
+            Properties.Settings.Default.TopRight = true;
         }
 
-        private void TopLeftUnchecked(object sender, RoutedEventArgs e)
+        private void TopRightUnchecked(object sender, RoutedEventArgs e)
         {
-            Properties.Settings.Default.TopLeft = false;
+            Properties.Settings.Default.TopRight = false;
         }
 
         //自启动
