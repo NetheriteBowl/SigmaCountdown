@@ -19,8 +19,20 @@ namespace SigmaCountdown
             bool TopRightIsonoff = Properties.Settings.Default.TopRight;
             TopRightCheckbox.IsChecked = TopRightIsonoff;
             event_Level_TB.Text = Properties.Settings.Default.EventLevel_Text;
-        }
 
+            //获得当前登录的Windows用户标示
+            System.Security.Principal.WindowsIdentity identity = System.Security.Principal.WindowsIdentity.GetCurrent();
+            System.Security.Principal.WindowsPrincipal principal = new System.Security.Principal.WindowsPrincipal(identity);
+            //判断当前登录用户是否为管理员
+            if (principal.IsInRole(System.Security.Principal.WindowsBuiltInRole.Administrator))
+            {
+                AutoStartCheckbox.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                AutoStartCheckbox.Visibility = Visibility.Hidden;
+            }
+    }
         //日期设定
         private void DatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -75,9 +87,10 @@ namespace SigmaCountdown
                     Properties.Settings.Default.AutoS = false;
                 }
             }
-
+            
             private static void RegisterAutoStart()
             {
+              
                 using (TaskService taskService = new TaskService())
                 {
                     // 定义计划任务名称和描述
@@ -113,7 +126,10 @@ namespace SigmaCountdown
                 }
             }
         }
-
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://github.com/NetheriteBowl/SigmaCountdown");
+        }
         //保存按钮
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
