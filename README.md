@@ -12,7 +12,7 @@
 
 ![截图展示](https://github.com/NetheriteBowl/SigmaCountdown/assets/75211294/336de5e8-6173-4aee-b430-f624dcf1f7db)
 
-_ 沙漏图标来自[IconPark](https://github.com/bytedance/iconpark "IconPark") _
+沙漏图标来自[IconPark](https://github.com/bytedance/iconpark "IconPark")
 
 1.支持编辑高考年份和提醒级别
 
