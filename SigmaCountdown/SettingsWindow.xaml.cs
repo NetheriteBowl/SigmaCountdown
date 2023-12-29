@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using Microsoft.Win32.TaskScheduler;
-
+using System.Security.Principal;
 namespace SigmaCountdown
 {
     public partial class SettingsWindow : Window
@@ -12,27 +12,28 @@ namespace SigmaCountdown
         public SettingsWindow()
         {
             InitializeComponent();
+            CheckIdentity();
             DateTime selectedDate = Properties.Settings.Default.Date;
             datePicker.SelectedDate = selectedDate;
-            bool AutoSIsonoff = Properties.Settings.Default.AutoS;
-            AutoStartCheckbox.IsChecked = AutoSIsonoff;
             bool TopRightIsonoff = Properties.Settings.Default.TopRight;
             TopRightCheckbox.IsChecked = TopRightIsonoff;
             event_Level_TB.Text = Properties.Settings.Default.EventLevel_Text;
-
-            //获得当前登录的Windows用户标示
-            System.Security.Principal.WindowsIdentity identity = System.Security.Principal.WindowsIdentity.GetCurrent();
-            System.Security.Principal.WindowsPrincipal principal = new System.Security.Principal.WindowsPrincipal(identity);
-            //判断当前登录用户是否为管理员
-            if (principal.IsInRole(System.Security.Principal.WindowsBuiltInRole.Administrator))
-            {
-                AutoStartCheckbox.Visibility = Visibility.Visible;
-            }
-            else
+            bool AutoSIsonoff = Properties.Settings.Default.AutoS;
+            AutoStartCheckbox.IsChecked = AutoSIsonoff;
+        }
+        private void CheckIdentity()
+        {
+            // 获取当前进程的WindowsIdentity和WindowsPrincipal
+            WindowsIdentity identity = WindowsIdentity.GetCurrent(); 
+            WindowsPrincipal principal = new WindowsPrincipal(identity);
+            // 检查当前用户是否具有管理员权限  
+            bool isAdmin = principal.IsInRole(WindowsBuiltInRole.Administrator);
+            if (!isAdmin)
             {
                 AutoStartCheckbox.Visibility = Visibility.Hidden;
+                WarningText.Visibility = Visibility.Visible;
             }
-    }
+        }
         //日期设定
         private void DatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
