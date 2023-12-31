@@ -10,18 +10,17 @@
 
     <hc:SimpleStackPanel>
 
-        <Grid Background="#FF90A6E0" Margin="0,0,0,13">
+        <Grid Background="#FF90A6E0" Height="110" VerticalAlignment="Top">
             <TextBlock Text="Sigma Countdown" FontSize="25" FontWeight="Bold" FontFamily="Microsoft Sans Serif" Margin="10,7,14,72"/>
             <TextBlock Text="with wandering earth 2 style" FontSize="14" FontStyle="Italic" TextDecorations="Underline" Margin="10,36,10,56"/>
-            <TextBlock Text="Developed by Netherite_Bowl" FontSize="10" Margin="10,60,10,38"/>
-            <TextBlock FontSize="10" Margin="10,76,10,20">
+            <TextBlock Text="Developed by Netherite_Bowl" FontSize="10" Margin="10,68,10,30"/>
+            <TextBlock FontSize="10" Margin="10,84,10,12">
                     仓库地址:
                     <Hyperlink FontSize="10" Click="Hyperlink_Click">NetheriteBowl/SigmaCountdown</Hyperlink>
 
             </TextBlock>
-            <TextBlock x:Name="WarningText" Text="⚠️ 请右键exe文件以管理员权限运行，否则将无法设置开机自启动" FontSize="10" Margin="10,92,10,6" Foreground="#FFAE0000" Visibility="Hidden"/>
         </Grid>
-        <Grid Height="309" VerticalAlignment="Top" Margin="0,-13,0,-21">
+        <Grid Margin="0,0,0,-21">
             <DatePicker x:Name="datePicker" Style="{StaticResource DatePickerExtend}" hc:TitleElement.TitlePlacement="Left" hc:TitleElement.Title="选择事件日期" SelectedDateChanged="DatePicker_SelectedDateChanged" Margin="10,11,10,267"/>
             <CheckBox x:Name="AutoStartCheckbox"  Checked="AutoStartChecked" Unchecked="AutoStartUnchecked" Content="开机自启动" Margin="10,90,10,203" Height="16"/>
             <CheckBox x:Name="TopRightCheckbox" Checked="TopRightChecked" Unchecked="TopRightUnchecked" Content="显示在右上角" Margin="10,116,10,177" Height="16"/>

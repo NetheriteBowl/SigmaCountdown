@@ -31,7 +31,6 @@ namespace SigmaCountdown
             if (!isAdmin)
             {
                 AutoStartCheckbox.Visibility = Visibility.Hidden;
-                WarningText.Visibility = Visibility.Visible;
             }
         }
         //日期设定
