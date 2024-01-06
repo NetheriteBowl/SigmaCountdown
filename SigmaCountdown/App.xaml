@@ -8,7 +8,6 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary>
-                    <FontFamily x:Key="zihun59">pack://application:,,,/Resources/字魂59号-创粗黑字体.ttf#字魂59号-创粗黑</FontFamily>
                     <FontFamily x:Key="DIN1451">pack://application:,,,/Resources/DIN 1451 LT W06 Mittelschrift.ttf#DIN1451LTW06-Mittelschrift</FontFamily>
                 </ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/Theme.xaml"/>
