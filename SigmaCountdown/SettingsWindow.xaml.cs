@@ -27,10 +27,10 @@ namespace SigmaCountdown
             WindowsIdentity identity = WindowsIdentity.GetCurrent(); 
             WindowsPrincipal principal = new WindowsPrincipal(identity);
             // 检查当前用户是否具有管理员权限  
-            bool isAdmin = principal.IsInRole(WindowsBuiltInRole.Administrator);
-            if (!isAdmin)
+            if (principal.IsInRole(System.Security.Principal.WindowsBuiltInRole.Administrator) == false)
             {
                 AutoStartCheckbox.Visibility = Visibility.Hidden;
+                WarningText.Visibility = Visibility.Visible;
             }
         }
         //日期设定
