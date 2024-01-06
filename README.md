@@ -12,8 +12,6 @@
 
 ![截图展示](https://github.com/NetheriteBowl/SigmaCountdown/assets/75211294/336de5e8-6173-4aee-b430-f624dcf1f7db)
 
-沙漏图标来自[IconPark](https://github.com/bytedance/iconpark "IconPark")
-
 1.支持编辑高考年份和提醒级别
 
 2.支持开机自启，启动后默认贴靠右下角（可设置为右上角）
@@ -21,4 +19,7 @@
 3.右键菜单可关闭窗口
 
 ## 注意
-若要设置开机自启请以管理员方式运行程序
+若要设置开机自启，请以管理员方式运行程序
+若要正常显示中文部分字体“字魂59号-创粗黑”，请前往[官网下载](https://izihun.com/shangyongziti/574.html)
+沙漏图标来自[IconPark](https://github.com/bytedance/iconpark "IconPark")
+数字部分使用的DIN 1451字体：https://github.com/playbeing/dinish
