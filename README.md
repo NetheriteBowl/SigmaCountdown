@@ -20,6 +20,10 @@
 
 ## 注意
 若要设置开机自启，请以管理员方式运行程序
-若要正常显示中文部分字体“字魂59号-创粗黑”，请前往[官网下载](https://izihun.com/shangyongziti/574.html)
+
+若要正常显示中文部分字体“字魂创粗黑”，请前往[官网下载](https://izihun.com/shangyongziti/574.html)后安装 “字魂创粗黑.ttf” 字体文件
+
 沙漏图标来自[IconPark](https://github.com/bytedance/iconpark "IconPark")
-数字部分使用的DIN 1451字体：https://github.com/playbeing/dinish
+
+数字部分使用的DIN 1451字体：[playbeing/dinish](https://github.com/playbeing/dinish
+)
