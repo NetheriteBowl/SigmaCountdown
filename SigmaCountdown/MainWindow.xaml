@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:hc="https://handyorg.github.io/handycontrol"
         mc:Ignorable="d"
         WindowStyle="None"
         ResizeMode="NoResize"
@@ -23,20 +22,20 @@
 
     <Canvas MouseLeftButtonDown="Canvas_MouseLeftButtonDown" Margin="-35,0,-18,-1" Height="204" VerticalAlignment="Bottom">
 
-        <TextBlock Text="距" FontSize="60" Foreground="#DFD9D6"
-                   Canvas.Left="28" Canvas.Bottom="100" Canvas.Top="5" FontFamily="字魂59号-创粗黑" />
+        <TextBlock Text="距" FontSize="55" Foreground="#DFD9D6"
+                   Canvas.Left="28" Canvas.Bottom="100" Canvas.Top="5" FontFamily="字魂创粗黑" />
         <TextBlock x:Name="year" Text="2024" FontSize="60" Foreground="#DFD9D6"
-                   Canvas.Left="90" Canvas.Bottom="100" Canvas.Top="5" FontFamily="{StaticResource DIN1451}" Height="66" />
-        <TextBlock x:Name="event" Text="高考" FontSize="60" Foreground="#DFD9D6"
-                   Canvas.Left="221" Canvas.Bottom="100" Canvas.Top="5" FontFamily="字魂59号-创粗黑" />
-        <TextBlock x:Name="event_level" Text="还剩" FontSize="60" Foreground="#DFD9D6"
-                   Canvas.Left="221" Canvas.Bottom="100" Canvas.Top="70" FontFamily="字魂59号-创粗黑" />
+                   Canvas.Left="90" Canvas.Bottom="100" Canvas.Top="10" FontFamily="{StaticResource DIN1451}" Height="66" />
+        <TextBlock x:Name="event" Text="高考" FontSize="55" Foreground="#DFD9D6"
+                   Canvas.Left="221" Canvas.Bottom="100" Canvas.Top="5" FontFamily="字魂创粗黑" />
+        <TextBlock x:Name="event_level" Text="还剩" FontSize="55" Foreground="#DFD9D6"
+                   Canvas.Left="221" Canvas.Bottom="100" Canvas.Top="70" FontFamily="字魂创粗黑" />
         <TextBlock x:Name="countdown" Text="365" FontSize="130" Foreground="#DA3838"
                    Canvas.Left="341" Canvas.Bottom="100" Canvas.Top="0" Height="136" Width="213" FontFamily="{StaticResource DIN1451}" TextAlignment="Right" />
         <TextBlock x:Name="decimalNum" Text=".555" FontSize="40" Foreground="#DA3838"
                    Canvas.Left="551" Canvas.Bottom="100" Canvas.Top="80" Height="51" Width="auto" FontFamily="{StaticResource DIN1451}" TextAlignment="Center" />
-        <TextBlock Text="天" FontSize="60" Foreground="#DFD9D6"
-                   Canvas.Left="623" Canvas.Bottom="100" Canvas.Top="70" RenderTransformOrigin="0.983,0.53" FontFamily="字魂59号-创粗黑" />
+        <TextBlock Text="天" FontSize="55" Foreground="#DFD9D6"
+                   Canvas.Left="623" Canvas.Bottom="100" Canvas.Top="70" RenderTransformOrigin="0.983,0.53" FontFamily="字魂创粗黑" />
         <Border x:Name="LeftBorder" BorderThickness="10" BorderBrush="#DA3838" Width="8" Height="111"
                 Canvas.Left="206" Canvas.Bottom="0" Canvas.Top="77">
         </Border>
