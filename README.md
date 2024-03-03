@@ -8,8 +8,7 @@
 </div>
 
 ## 概述
-一个具有电影《流浪地球Ⅱ》风格的桌面倒计时贴片，目前仅支持高考（TODO：更改事件名称和自适应布局）
-
+一个具有电影《流浪地球Ⅱ》风格的桌面倒计时贴片，目前仅支持高考
 ![截图展示](https://github.com/NetheriteBowl/SigmaCountdown/assets/75211294/336de5e8-6173-4aee-b430-f624dcf1f7db)
 
 1.支持编辑高考年份和提醒级别
@@ -19,11 +18,18 @@
 3.右键菜单可关闭窗口
 
 ## 注意
+
+### 2024高考后将重写项目并不再严格参照电影风格
+
 若要设置开机自启，请以管理员方式运行程序
 
 若要正常显示中文部分字体“字魂创粗黑”，请前往[官网下载](https://izihun.com/shangyongziti/574.html)后安装 “字魂创粗黑.ttf” 字体文件
 
 沙漏图标来自[IconPark](https://github.com/bytedance/iconpark "IconPark")
 
-数字部分使用的DIN 1451字体：[playbeing/dinish](https://github.com/playbeing/dinish
+数字的DIN 1451字体来自：[playbeing/dinish](https://github.com/playbeing/dinish
 )
+
+## TODO
+[]更改事件名称
+[]自适应布局
