@@ -1,12 +1,13 @@
-﻿<Window  x:Class="SigmaCountdown.SettingsWindow"
+﻿<Window x:Class="SigmaCountdown.SettingsWindow"
         xmlns:hc="https://handyorg.github.io/handycontrol"
-              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-               WindowStartupLocation="CenterScreen"
-        Title="设置" Height="450" Width="300">
+        WindowStartupLocation="CenterScreen"
+        SizeToContent="Height"
+        Title="设置" Width="330">
 
     <hc:SimpleStackPanel>
 
@@ -20,13 +21,16 @@
 
             </TextBlock>
         </Grid>
-        <Grid Margin="0,0,0,-21">
-            <DatePicker x:Name="datePicker" Style="{StaticResource DatePickerExtend}" hc:TitleElement.TitlePlacement="Left" hc:TitleElement.Title="选择事件日期" SelectedDateChanged="DatePicker_SelectedDateChanged" Margin="10,11,10,267"/>
-            <CheckBox x:Name="AutoStartCheckbox"  Checked="AutoStartChecked" Unchecked="AutoStartUnchecked" Content="开机自启动" Margin="10,90,10,203" Height="16"/>
-            <TextBlock x:Name="WarningText" Text="⚠️ 要设置开机启动，请退出并右键exe文件以管理员权限运行" FontSize="10" Margin="10,93,10,200" Foreground="#FFAE0000" Visibility="Hidden"/>
-            <CheckBox x:Name="TopRightCheckbox" Checked="TopRightChecked" Unchecked="TopRightUnchecked" Content="显示在右上角" Margin="10,116,10,177" Height="16"/>
-            <TextBox x:Name="event_Level_TB"  TextChanged="LevelTextChangedEventHandler"  Text="" Style="{StaticResource TextBoxExtend}" hc:InfoElement.TitlePlacement="Left" hc:InfoElement.Placeholder="默认为 还剩 " hc:InfoElement.Title="事件提醒级别" VerticalAlignment="Center" Margin="10,50,10,229"/>
-            <Button Content="保存并重启程序" Click="SaveButton_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="132" Margin="0,0,10,10" hc:IconElement.Geometry="M608 320C625.664 320 640 305.696 640 288L640 160C640 142.304 625.664 128 608 128 590.336 128 576 142.304 576 160L576 288C576 305.696 590.336 320 608 320L608 320ZM960 896C960 931.328 931.328 960 896 960L128 960C92.672 960 64 931.328 64 896L64 128C64 92.672 92.672 64 128 64L192 64 192 384C192 419.328 220.672 448 256 448L768 448C803.328 448 832 419.328 832 384L832 64 896 64C931.328 64 960 92.672 960 128L960 896 960 896ZM256 64 768 64 768 352C768 369.696 753.664 384 736 384L288 384C270.336 384 256 369.696 256 352L256 64 256 64ZM896 0 128 0C57.312 0 0 57.312 0 128L0 896C0 966.688 57.312 1024 128 1024L896 1024C966.688 1024 1024 966.688 1024 896L1024 128C1024 57.312 966.688 0 896 0L896 0Z"/>
+        <Grid>
+            <Grid Margin="10,10,10,10">
+                    <DatePicker x:Name="datePicker" Style="{StaticResource DatePickerExtend}" hc:TitleElement.TitlePlacement="Left" hc:TitleElement.Title="选择事件日期" SelectedDateChanged="DatePicker_SelectedDateChanged" Margin="0,0,0,275"/>
+                    <CheckBox x:Name="AutoStartCheckbox"  Checked="AutoStartChecked" Unchecked="AutoStartUnchecked" Content="开机自启动" Margin="0,79,0,214" Height="16"/>
+                <TextBlock x:Name="WarningText" Text="⚠️ 要设置开机启动，请退出并右键exe文件以管理员权限运行" FontSize="10" Margin="0,79,0,214" Foreground="#FFAE0000" Visibility="Collapsed"/>
+                    <CheckBox x:Name="TopRightCheckbox" Checked="TopRightChecked" Unchecked="TopRightUnchecked" Content="显示在右上角" Margin="0,105,0,188" Height="16"/>
+                <CheckBox x:Name="EvenYearVisibilityCheckbox" Checked="EventYearVisibilityChecked" Unchecked="EventYearVisibilityUnchecked" Content="显示事件年份" Margin="0,130,0,163" Height="16"/>
+                    <TextBox x:Name="event_Level_TB"  TextChanged="LevelTextChangedEventHandler"  Text="" Style="{StaticResource TextBoxExtend}" hc:TitleElement.TitlePlacement="Left" hc:InfoElement.Placeholder="默认为 还剩 " hc:TitleElement.Title="事件提醒级别" VerticalAlignment="Center" Margin="0,39,0,240"/>
+                </Grid>
+                <Button Content="保存并重启程序" Click="SaveButton_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10,10,10,10" hc:IconElement.Geometry="M608 320C625.664 320 640 305.696 640 288L640 160C640 142.304 625.664 128 608 128 590.336 128 576 142.304 576 160L576 288C576 305.696 590.336 320 608 320L608 320ZM960 896C960 931.328 931.328 960 896 960L128 960C92.672 960 64 931.328 64 896L64 128C64 92.672 92.672 64 128 64L192 64 192 384C192 419.328 220.672 448 256 448L768 448C803.328 448 832 419.328 832 384L832 64 896 64C931.328 64 960 92.672 960 128L960 896 960 896ZM256 64 768 64 768 352C768 369.696 753.664 384 736 384L288 384C270.336 384 256 369.696 256 352L256 64 256 64ZM896 0 128 0C57.312 0 0 57.312 0 128L0 896C0 966.688 57.312 1024 128 1024L896 1024C966.688 1024 1024 966.688 1024 896L1024 128C1024 57.312 966.688 0 896 0L896 0Z"/>
         </Grid>
 
     </hc:SimpleStackPanel>

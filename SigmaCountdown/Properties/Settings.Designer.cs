@@ -82,5 +82,17 @@ namespace SigmaCountdown.Properties {
                 this["EventLevel_Text"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool EventYear_Visibility {
+            get {
+                return ((bool)(this["EventYear_Visibility"]));
+            }
+            set {
+                this["EventYear_Visibility"] = value;
+            }
+        }
     }
 }

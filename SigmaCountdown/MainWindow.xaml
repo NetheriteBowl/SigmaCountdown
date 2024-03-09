@@ -11,7 +11,7 @@
         AllowsTransparency="True"
         Title="Sigma Countdown"
         Loaded="Window_Loaded"
-        ShowInTaskbar="False" FontFamily="Segoe UI" VerticalContentAlignment="Center">
+        ShowInTaskbar="False" Left="0">
     <Window.ContextMenu>
         <ContextMenu>
             <MenuItem x:Name="MenuItem_Settings" Header="设置" Click="MenuItem_Settings_Click"/>
@@ -21,25 +21,28 @@
         </ContextMenu>
     </Window.ContextMenu>
     <DockPanel LastChildFill="False">
-        <DockPanel LastChildFill="False" Height="159">
+        <DockPanel LastChildFill="False" Height="155">
             <TextBlock Text="距" FontSize="55" Foreground="#DFD9D6"
-                    FontFamily="字魂创粗黑" Margin="0,1,0,84"/>
-            <TextBlock x:Name="year" Text="2024" FontSize="60" Foreground="#DFD9D6"
+                    FontFamily="字魂创粗黑" Margin="0,0,0,90"/>
+            <TextBlock x:Name="event_year" Text="2024" FontSize="60" Foreground="#DFD9D6"
                     FontFamily="{StaticResource DIN1451}" Margin="0,6,0,84"/>
-            <Grid HorizontalAlignment="Center">
-                <Border x:Name="LeftBorder" BorderThickness="10" BorderBrush="#DA3838" Width="4" Margin="-4,75,128,29" />
+            <Grid>
                 <TextBlock x:Name="event" Text="高考" FontSize="55" Foreground="#DFD9D6"
-                    FontFamily="字魂创粗黑" VerticalAlignment="Bottom" Margin="0,0,0,95" />
-                <TextBlock x:Name="event_level" Text="还剩" FontSize="55" Foreground="#DFD9D6"
-                    FontFamily="字魂创粗黑" Margin="0,62,0,16" />
+                    FontFamily="字魂创粗黑" VerticalAlignment="Bottom" Margin="0,0,0,89" />
+                <DockPanel LastChildFill="False" Margin="-6,69,0,0" HorizontalAlignment="Right">
+                    <Border x:Name="LeftBorder" BorderThickness="10" BorderBrush="#DA3838" Width="6" HorizontalAlignment="Right" Margin="0,10,0,22" RenderTransformOrigin="0.5,0.5" />
+                    <TextBlock x:Name="event_level" Text="还剩" FontSize="55" Foreground="#DFD9D6"
+                        FontFamily="字魂创粗黑" Margin="0,-4,0,0"/>
+
+                </DockPanel>
             </Grid>
         </DockPanel>
-        <DockPanel LastChildFill="False" Height="159">
+        <DockPanel LastChildFill="False" Height="155">
             <TextBlock x:Name="countdown" Text="365" FontSize="130" Foreground="#DA3838"
-                FontFamily="{StaticResource DIN1451}" TextAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,8,0,15"/>
+                FontFamily="{StaticResource DIN1451}" TextAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,-1"/>
             <TextBlock x:Name="decimalNum" Text=".555" FontSize="40" Foreground="#DA3838" FontFamily="{StaticResource DIN1451}" HorizontalAlignment="Left" TextAlignment="Left" Height="41" Margin="0,86,0,30"/>
             <TextBlock Text="天" FontSize="55" Foreground="#DFD9D6"
-                RenderTransformOrigin="0.983,0.53" FontFamily="字魂创粗黑" Margin="0,73,0,-3" Width="58" />
+                RenderTransformOrigin="0.983,0.53" FontFamily="字魂创粗黑" Margin="0,70,0,0"/>
         </DockPanel>
     </DockPanel>
 </Window>

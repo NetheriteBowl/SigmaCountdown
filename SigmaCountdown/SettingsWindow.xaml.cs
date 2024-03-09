@@ -15,11 +15,13 @@ namespace SigmaCountdown
             CheckIdentity();
             DateTime selectedDate = Properties.Settings.Default.Date;
             datePicker.SelectedDate = selectedDate;
+            event_Level_TB.Text = Properties.Settings.Default.EventLevel_Text;
             bool TopRightIsonoff = Properties.Settings.Default.TopRight;
             TopRightCheckbox.IsChecked = TopRightIsonoff;
-            event_Level_TB.Text = Properties.Settings.Default.EventLevel_Text;
             bool AutoSIsonoff = Properties.Settings.Default.AutoS;
             AutoStartCheckbox.IsChecked = AutoSIsonoff;
+            bool EvenYearVIsonoff = Properties.Settings.Default.EventYear_Visibility;
+            EvenYearVisibilityCheckbox.IsChecked = EvenYearVIsonoff;
         }
         private void CheckIdentity()
         {
@@ -49,7 +51,7 @@ namespace SigmaCountdown
             Properties.Settings.Default.EventLevel_Text = event_Level_TB.Text;
         }
 
-        //右上角显示
+        //右上角显示与否
         private void TopRightChecked(object sender, RoutedEventArgs e)
         {
             Properties.Settings.Default.TopRight = true;
@@ -58,6 +60,17 @@ namespace SigmaCountdown
         private void TopRightUnchecked(object sender, RoutedEventArgs e)
         {
             Properties.Settings.Default.TopRight = false;
+        }
+
+        //事件年份显示与否
+        private void EventYearVisibilityChecked(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.EventYear_Visibility = true;
+        }
+
+        private void EventYearVisibilityUnchecked(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.EventYear_Visibility = false;
         }
 
         //自启动
@@ -126,6 +139,7 @@ namespace SigmaCountdown
                 }
             }
         }
+        //链接跳转
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("https://github.com/NetheriteBowl/SigmaCountdown");

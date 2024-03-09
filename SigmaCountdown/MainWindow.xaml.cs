@@ -10,26 +10,40 @@ namespace SigmaCountdown
 
     public partial class MainWindow : Window
     {
-            public MainWindow()
+        public MainWindow()
         {
             InitializeComponent();
             StartCountdown();
+            SizeChanged += WindowSizeChanged;
         }
-    private void Window_Loaded(object sender, RoutedEventArgs e)
-    {
-            //this.SizeToContent = SizeToContent.WidthAndHeight;
-            Left = SystemParameters.PrimaryScreenWidth - (this.Width);
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            SetWindowPositionAndSize();
+
             event_level.Text = Properties.Settings.Default.EventLevel_Text;
+            event_year.Text = Properties.Settings.Default.Date.Year.ToString();
+            if (Properties.Settings.Default.EventYear_Visibility == false)
+            {
+                event_year.Visibility = Visibility.Collapsed;
+            }
+        }
+        private void WindowSizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            SetWindowPositionAndSize();
+        }
+        private void SetWindowPositionAndSize()
+        {
+            Left = SystemParameters.PrimaryScreenWidth - (this.ActualWidth);
             if (Properties.Settings.Default.TopRight == false)
-            { Top = SystemParameters.WorkArea.Height - (this.Height); }
+            { Top = SystemParameters.WorkArea.Height - (this.ActualHeight); }
             else
-            { Top = 1;}
+            { Top = 1; }
         }
 
         private void StartCountdown()
         {
             DateTime deadline = Properties.Settings.Default.Date + new TimeSpan(9, 00, 0);
-            DateTime deadlineOfDay = DateTime.Now.Date.AddDays(1).AddHours(9).AddMinutes(0).AddSeconds(0).AddMilliseconds(0);
+            DateTime deadlineOfDay = DateTime.Now.Date.AddDays(1) + new TimeSpan(9, 00, 0);
             TimeSpan timeLeft = deadline - DateTime.Now;
             TimeSpan dotSpan = deadlineOfDay - DateTime.Now;
             int daysLeft = (int)timeLeft.TotalDays;
@@ -41,8 +55,7 @@ namespace SigmaCountdown
                 if (Numdecimal == "1.000")
                 { decimalNum.Text = ".999"; }
                 else { decimalNum.Text = Numdecimal.ToString();}
-                    countdown.Text = daysLeft.ToString();
-
+                countdown.Text = daysLeft.ToString();
             };
 
              timer.Start();
