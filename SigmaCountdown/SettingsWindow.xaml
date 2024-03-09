@@ -18,7 +18,6 @@
             <TextBlock FontSize="10" Margin="10,84,10,12">
                     仓库地址:
                     <Hyperlink FontSize="10" Click="Hyperlink_Click">NetheriteBowl/SigmaCountdown</Hyperlink>
-
             </TextBlock>
         </Grid>
         <Grid>
