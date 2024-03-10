@@ -57,6 +57,7 @@ namespace SigmaCountdown
                 string Numdecimal = (dotSpan.TotalSeconds/86400.0).ToString(".000");
                 if (Numdecimal == "1.000")
                 { decimalNum.Text = ".999"; }
+                //待修改
                 else { decimalNum.Text = Numdecimal.ToString();}
                 countdown.Text = daysLeft.ToString();
             };
