@@ -51,6 +51,9 @@ namespace SigmaCountdown
              timer.Interval = TimeSpan.FromSeconds(1);
              timer.Tick += (sender, e) =>
             {
+                timeLeft = deadline - DateTime.Now;
+                dotSpan = deadlineOfDay - DateTime.Now;
+                daysLeft = (int)timeLeft.TotalDays;
                 string Numdecimal = (dotSpan.TotalSeconds/86400.0).ToString(".000");
                 if (Numdecimal == "1.000")
                 { decimalNum.Text = ".999"; }
