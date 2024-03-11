@@ -43,21 +43,17 @@ namespace SigmaCountdown
         private void StartCountdown()
         {
             DateTime deadline = Properties.Settings.Default.Date + new TimeSpan(9, 00, 0);
-            DateTime deadlineOfDay = DateTime.Now.Date.AddDays(1) + new TimeSpan(9, 00, 0);
             TimeSpan timeLeft = deadline - DateTime.Now;
-            TimeSpan dotSpan = deadlineOfDay - DateTime.Now;
             int daysLeft = (int)timeLeft.TotalDays;
             DispatcherTimer timer = new DispatcherTimer();
              timer.Interval = TimeSpan.FromSeconds(1);
              timer.Tick += (sender, e) =>
             {
                 timeLeft = deadline - DateTime.Now;
-                dotSpan = deadlineOfDay - DateTime.Now;
                 daysLeft = (int)timeLeft.TotalDays;
-                string Numdecimal = (dotSpan.TotalSeconds/86400.0).ToString(".000");
+                string Numdecimal = (timeLeft.TotalDays - timeLeft.Days).ToString(".000");
                 if (Numdecimal == "1.000")
                 { decimalNum.Text = ".999"; }
-                //待修改
                 else { decimalNum.Text = Numdecimal.ToString();}
                 countdown.Text = daysLeft.ToString();
             };

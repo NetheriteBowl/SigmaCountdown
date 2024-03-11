@@ -148,9 +148,6 @@ namespace SigmaCountdown
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             Properties.Settings.Default.Save();
-            // 返回主界面
-            MainWindow MainWindow = Application.Current.MainWindow as MainWindow;
-            if (MainWindow != null)
             {
                 System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
                 Application.Current.Shutdown();
