@@ -22,17 +22,12 @@
     </Window.ContextMenu>
     <DockPanel LastChildFill="False">
         <DockPanel LastChildFill="False" Height="132">
-            <TextBlock Text="距" FontSize="55" Foreground="#DFD9D6"
-                    FontFamily="字魂创粗黑" VerticalAlignment="Top"/>
-            <TextBlock x:Name="event_year" Text="2024" FontSize="55" Foreground="#DFD9D6"
-                    FontFamily="字魂创粗黑" VerticalAlignment="Top"/>
             <Grid>
-                <TextBlock x:Name="event" Text="高考" FontSize="55" Foreground="#DFD9D6"
-                    FontFamily="字魂创粗黑" VerticalAlignment="Top" HorizontalAlignment="Right"/>
                 <DockPanel HorizontalAlignment="Right" LastChildFill="False" VerticalAlignment="Bottom">
-                    <Border x:Name="LeftBorder" BorderThickness="10" BorderBrush="#DA3838" Width="6" Height="54" VerticalAlignment="Bottom" />
-                    <TextBlock x:Name="event_level" Text="还剩" FontSize="55" Foreground="#DFD9D6" FontFamily="字魂创粗黑"/>
+                    <Border x:Name="LeftBorder" BorderThickness="10" BorderBrush="#DA3838" Width="6" Height="65" />
+                    <TextBlock x:Name="event_level" Text="还剩" FontSize="55" Foreground="#DFD9D6" VerticalAlignment="Center"/>
                 </DockPanel>
+                <TextBlock x:Name="event_nameandyear" Text="距2025高考" FontSize="55" Foreground="#DFD9D6" VerticalAlignment="Top" Margin="0,-9,0,0"/>
             </Grid>
         </DockPanel>
         <DockPanel LastChildFill="False" Height="132">
@@ -40,7 +35,7 @@
                 FontFamily="{StaticResource DIN1451}" TextAlignment="Left"/>
             <TextBlock x:Name="decimalNum" Text=".555" FontSize="40" Foreground="#DA3838" FontFamily="{StaticResource DIN1451}" TextAlignment="Left" Margin="0,87,0,0"/>
             <TextBlock Text="天" FontSize="55" Foreground="#DFD9D6"
-                RenderTransformOrigin="0.983,0.53" FontFamily="字魂创粗黑" Margin="0,70,0,0"/>
+                RenderTransformOrigin="0.983,0.53" Margin="0,70,0,0"/>
         </DockPanel>
     </DockPanel>
 </Window>

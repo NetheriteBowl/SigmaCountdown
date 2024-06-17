@@ -18,10 +18,6 @@ namespace SigmaCountdown
             event_Level_TB.Text = Properties.Settings.Default.EventLevel_Text;
             bool TopRightIsonoff = Properties.Settings.Default.TopRight;
             TopRightCheckbox.IsChecked = TopRightIsonoff;
-            bool AutoSIsonoff = Properties.Settings.Default.AutoS;
-            AutoStartCheckbox.IsChecked = AutoSIsonoff;
-            bool EvenYearVIsonoff = Properties.Settings.Default.EventYear_Visibility;
-            EvenYearVisibilityCheckbox.IsChecked = EvenYearVIsonoff;
         }
         private void CheckIdentity()
         {
@@ -34,6 +30,12 @@ namespace SigmaCountdown
                 AutoStartCheckbox.Visibility = Visibility.Hidden;
                 WarningText.Visibility = Visibility.Visible;
             }
+            else
+            {
+                bool AutoSIsonoff = Properties.Settings.Default.AutoS;
+                AutoStartCheckbox.IsChecked = AutoSIsonoff;
+            }
+
         }
         //日期设定
         private void DatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
@@ -49,6 +51,12 @@ namespace SigmaCountdown
         private void LevelTextChangedEventHandler(object sender, TextChangedEventArgs args)
         {
             Properties.Settings.Default.EventLevel_Text = event_Level_TB.Text;
+        }
+
+        //编辑提醒级别文本
+        private void NameTextChangedEventHandler(object sender, TextChangedEventArgs args)
+        {
+            Properties.Settings.Default.EventName_Text = event_Name_TB.Text;
         }
 
         //右上角显示与否
@@ -152,6 +160,11 @@ namespace SigmaCountdown
                 System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
                 Application.Current.Shutdown();
             }
+        }
+
+        private void event_Name_TB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

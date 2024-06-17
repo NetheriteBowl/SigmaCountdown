@@ -19,12 +19,16 @@ namespace SigmaCountdown
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             SetWindowPositionAndSize();
-
+            string Eventyear = Properties.Settings.Default.Date.Year.ToString();
+            string EventName = Properties.Settings.Default.EventName_Text;
             event_level.Text = Properties.Settings.Default.EventLevel_Text;
-            event_year.Text = Properties.Settings.Default.Date.Year.ToString();
             if (Properties.Settings.Default.EventYear_Visibility == false)
             {
-                event_year.Visibility = Visibility.Collapsed;
+                event_nameandyear.Text = "距" + EventName;
+            }
+            else
+            {
+                event_nameandyear.Text = "距" + Eventyear + EventName;
             }
         }
         private void WindowSizeChanged(object sender, SizeChangedEventArgs e)

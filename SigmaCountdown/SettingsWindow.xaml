@@ -12,24 +12,25 @@
     <hc:SimpleStackPanel>
 
         <Grid Background="#FF90A6E0" Height="110" VerticalAlignment="Top">
-            <TextBlock Text="Sigma Countdown" FontSize="25" FontWeight="Bold" FontFamily="Microsoft Sans Serif" Margin="10,7,14,72"/>
-            <TextBlock Text="with wandering earth 2 style" FontSize="14" FontStyle="Italic" TextDecorations="Underline" Margin="10,36,10,56"/>
-            <TextBlock Text="Developed by Netherite_Bowl" FontSize="10" Margin="10,68,10,30"/>
+            <TextBlock Text="Sigma Countdown" FontSize="25" FontWeight="Bold" FontFamily="Microsoft Sans Serif" Margin="10,6,14,73"/>
+            <TextBlock Text="with wandering earth 2 style" FontSize="14" FontStyle="Italic" TextDecorations="Underline" Margin="10,39,10,53"/>
+            <TextBlock Text="Developed by Netherite_Bowl" FontSize="10" Margin="10,69,10,29"/>
             <TextBlock FontSize="10" Margin="10,84,10,12">
                     仓库地址:
                     <Hyperlink FontSize="10" Click="Hyperlink_Click">NetheriteBowl/SigmaCountdown</Hyperlink>
             </TextBlock>
         </Grid>
         <Grid>
-            <Grid Margin="10,10,10,10">
-                    <DatePicker x:Name="datePicker" Style="{StaticResource DatePickerExtend}" hc:TitleElement.TitlePlacement="Left" hc:TitleElement.Title="选择事件日期" SelectedDateChanged="DatePicker_SelectedDateChanged" Margin="0,0,0,275"/>
-                    <CheckBox x:Name="AutoStartCheckbox"  Checked="AutoStartChecked" Unchecked="AutoStartUnchecked" Content="开机自启动" Margin="0,79,0,214" Height="16"/>
-                <TextBlock x:Name="WarningText" Text="⚠️ 要设置开机启动，请退出并右键exe文件以管理员权限运行" FontSize="10" Margin="0,79,0,214" Foreground="#FFAE0000" Visibility="Collapsed"/>
-                    <CheckBox x:Name="TopRightCheckbox" Checked="TopRightChecked" Unchecked="TopRightUnchecked" Content="显示在右上角" Margin="0,105,0,188" Height="16"/>
-                <CheckBox x:Name="EvenYearVisibilityCheckbox" Checked="EventYearVisibilityChecked" Unchecked="EventYearVisibilityUnchecked" Content="显示事件年份" Margin="0,130,0,163" Height="16"/>
-                    <TextBox x:Name="event_Level_TB"  TextChanged="LevelTextChangedEventHandler"  Text="" Style="{StaticResource TextBoxExtend}" hc:TitleElement.TitlePlacement="Left" hc:InfoElement.Placeholder="默认为 还剩 " hc:TitleElement.Title="事件提醒级别" VerticalAlignment="Center" Margin="0,39,0,240"/>
-                </Grid>
-                <Button Content="保存并重启程序" Click="SaveButton_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10,10,10,10" hc:IconElement.Geometry="M608 320C625.664 320 640 305.696 640 288L640 160C640 142.304 625.664 128 608 128 590.336 128 576 142.304 576 160L576 288C576 305.696 590.336 320 608 320L608 320ZM960 896C960 931.328 931.328 960 896 960L128 960C92.672 960 64 931.328 64 896L64 128C64 92.672 92.672 64 128 64L192 64 192 384C192 419.328 220.672 448 256 448L768 448C803.328 448 832 419.328 832 384L832 64 896 64C931.328 64 960 92.672 960 128L960 896 960 896ZM256 64 768 64 768 352C768 369.696 753.664 384 736 384L288 384C270.336 384 256 369.696 256 352L256 64 256 64ZM896 0 128 0C57.312 0 0 57.312 0 128L0 896C0 966.688 57.312 1024 128 1024L896 1024C966.688 1024 1024 966.688 1024 896L1024 128C1024 57.312 966.688 0 896 0L896 0Z"/>
+            <Grid Margin="10,8,10,12">
+                <DatePicker x:Name="datePicker" Style="{StaticResource DatePickerExtend}" hc:TitleElement.TitlePlacement="Left" hc:TitleElement.Title="选择事件日期" SelectedDateChanged="DatePicker_SelectedDateChanged" Margin="0,0,0,261" Height="30"/>
+                <TextBox x:Name="event_Level_TB"  TextChanged="LevelTextChangedEventHandler"  Text="" Style="{StaticResource TextBoxExtend}" hc:TitleElement.TitlePlacement="Left" hc:InfoElement.Placeholder="默认为 [还剩] " hc:TitleElement.Title="事件提醒级别" VerticalAlignment="Top" Margin="0,41,0,0" Height="30"/>
+                <TextBox x:Name="event_Name_TB"  TextChanged="NameTextChangedEventHandler"  Text="" Style="{StaticResource TextBoxExtend}" hc:TitleElement.TitlePlacement="Left" hc:InfoElement.Placeholder="默认为 [高考] " hc:TitleElement.Title="事件展示名称" VerticalAlignment="Top" Margin="0,81,0,0" Height="30"/>
+                <CheckBox x:Name="AutoStartCheckbox"  Checked="AutoStartChecked" Unchecked="AutoStartUnchecked" Content="开机自启动" Margin="0,117,0,0" Height="16" VerticalAlignment="Top"/>
+                <TextBlock x:Name="WarningText" Text="⚠️ 要设置开机自启动，请退出并右键exe文件以管理员权限运行" FontSize="10" Margin="0,119,0,174" Foreground="#FFAE0000" Visibility="Collapsed"/>
+                <CheckBox x:Name="TopRightCheckbox" Checked="TopRightChecked" Unchecked="TopRightUnchecked" Content="显示在右上角" Height="16" Margin="0,144,0,0" VerticalAlignment="Top"/>
+                <CheckBox x:Name="EvenYearVisibilityCheckbox" Checked="EventYearVisibilityChecked" Unchecked="EventYearVisibilityUnchecked" Content="显示事件年份" Margin="0,171,0,0" Height="16" VerticalAlignment="Top"/>
+            </Grid>
+            <Button Content="保存并重启程序" Click="SaveButton_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10,10,10,10" hc:IconElement.Geometry="M608 320C625.664 320 640 305.696 640 288L640 160C640 142.304 625.664 128 608 128 590.336 128 576 142.304 576 160L576 288C576 305.696 590.336 320 608 320L608 320ZM960 896C960 931.328 931.328 960 896 960L128 960C92.672 960 64 931.328 64 896L64 128C64 92.672 92.672 64 128 64L192 64 192 384C192 419.328 220.672 448 256 448L768 448C803.328 448 832 419.328 832 384L832 64 896 64C931.328 64 960 92.672 960 128L960 896 960 896ZM256 64 768 64 768 352C768 369.696 753.664 384 736 384L288 384C270.336 384 256 369.696 256 352L256 64 256 64ZM896 0 128 0C57.312 0 0 57.312 0 128L0 896C0 966.688 57.312 1024 128 1024L896 1024C966.688 1024 1024 966.688 1024 896L1024 128C1024 57.312 966.688 0 896 0L896 0Z"/>
         </Grid>
 
     </hc:SimpleStackPanel>

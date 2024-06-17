@@ -20,5 +20,8 @@
     <Setting Name="EventYear_Visibility" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="EventName_Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)">高考</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
