@@ -16,8 +16,12 @@ namespace SigmaCountdown
             DateTime selectedDate = Properties.Settings.Default.Date;
             datePicker.SelectedDate = selectedDate;
             event_Level_TB.Text = Properties.Settings.Default.EventLevel_Text;
+            event_Name_TB.Text = Properties.Settings.Default.EventName_Text;
             bool TopRightIsonoff = Properties.Settings.Default.TopRight;
             TopRightCheckbox.IsChecked = TopRightIsonoff;
+            bool EvenYearVisibilityIsonoff = Properties.Settings.Default.EventYear_Visibility;
+            EvenYearVisibilityCheckbox.IsChecked = EvenYearVisibilityIsonoff;
+
         }
         private void CheckIdentity()
         {
@@ -44,7 +48,6 @@ namespace SigmaCountdown
             DateTime selectedDate = datePicker.SelectedDate ?? DateTime.Now;
             // 设置新的
             Properties.Settings.Default.Date = selectedDate.Date;
-            Properties.Settings.Default.Year = selectedDate.Year.ToString();
         }
 
         //编辑提醒级别文本
@@ -53,7 +56,7 @@ namespace SigmaCountdown
             Properties.Settings.Default.EventLevel_Text = event_Level_TB.Text;
         }
 
-        //编辑提醒级别文本
+        //编辑事件名称文本
         private void NameTextChangedEventHandler(object sender, TextChangedEventArgs args)
         {
             Properties.Settings.Default.EventName_Text = event_Name_TB.Text;

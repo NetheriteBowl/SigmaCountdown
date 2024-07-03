@@ -2,11 +2,8 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SigmaCountdown.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="Year" Type="System.String" Scope="User">
-      <Value Profile="(Default)">2024</Value>
-    </Setting>
     <Setting Name="Date" Type="System.DateTime" Scope="User">
-      <Value Profile="(Default)">2024-06-07</Value>
+      <Value Profile="(Default)">2025-06-07</Value>
     </Setting>
     <Setting Name="AutoS" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>

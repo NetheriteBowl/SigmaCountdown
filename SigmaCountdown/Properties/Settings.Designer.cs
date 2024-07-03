@@ -25,19 +25,7 @@ namespace SigmaCountdown.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2024")]
-        public string Year {
-            get {
-                return ((string)(this["Year"]));
-            }
-            set {
-                this["Year"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2024-06-07")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2025-06-07")]
         public global::System.DateTime Date {
             get {
                 return ((global::System.DateTime)(this["Date"]));
